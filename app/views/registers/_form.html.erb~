@@ -1,0 +1,168 @@
+<h1>SBOA SCHOOL JUNIOR COLLEGE,CHENNAI-600101.</h1>
+<h2>Registration form for LKG Admission 2013-2014</h2>
+<%= form_for(@register) do |f| %>
+  <% if @register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@register.errors.count, "error") %> prohibited this register from being saved:</h2>
+
+      <ul>
+      <% @register.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_of_student %><br>
+    <%= f.text_field :name_of_student %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br>
+    <%= f.date_select :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+<h5>Upload birth certificate</h5>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :father_or_guardian_name %><br>
+    <%= f.text_field :father_or_guardian_name %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_name %><br>
+    <%= f.text_field :mother_name %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :religion %><br>
+    <%= f.text_field :religion %>
+  </div>
+  <div class="field">
+    <%= f.label :caste %><br>
+    <%= f.text_field :caste %>
+  </div>
+ <div class="field">
+    <%= f.label :community_category %><br>
+    <%= f.text_field :community_category %>
+  </div>
+  
+ <h5>Upload community certificate</h5>
+  <div class="field">
+    <%= f.label :student_category %><br>
+    <%= f.text_field :student_category %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+ <h5>Upload sample certificate</h5>
+  <div class="field">
+    <%= f.label :sibling_or_existing_parent %><br>
+    <%= f.text_field :sibling_or_existing_parent %>
+  </div>
+  <div class="field">
+    <%= f.label :child_with_special_needs %><br>
+    <%= f.text_field :child_with_special_needs %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+ <h5>Upload enclose medical certificate</h5>
+  <div class="field">
+    <%= f.label :locality %><br>
+    <%= f.text_field :locality %>
+  </div>
+  <div class="field">
+    <%= f.label :residential_address %><br>
+    <%= f.text_field :residential_address %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+ <h5>Upload address proof</h5>
+  <div class="field">
+    <%= f.label :pincode %><br>
+    <%= f.text_field :pincode %>
+  </div>
+  <div class="field">
+    <%= f.label :landmark %><br>
+    <%= f.text_field :landmark %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_number %><br>
+    <%= f.text_field :mobile_number %>
+  </div>
+  <div class="field">
+    <%= f.label :landline_number %><br>
+    <%= f.text_field :landline_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_field :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :father_or_guardian_qualification %><br>
+    <%= f.text_field :father_or_guardian_qualification %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+ <h5>Upload educational certificate</h5>
+  <div class="field">
+    <%= f.label :mother_qualification %><br>
+    <%= f.text_field :mother_qualification %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+ <h5>Upload educational certificate</h5>
+  <div class="field">
+    <%= f.label :father_occupation_or_designation %><br>
+    <%= f.text_field :father_occupation_or_designation %>
+  </div>
+  <div class="field">
+    <%= f.label :father_annual_income %><br>
+    <%= f.text_field :father_annual_income %>
+  </div>
+  <div class="field">
+    <%= f.label :father_organisation_name %><br>
+    <%= f.text_field :father_organisation_name %>
+  </div>
+  <div class="field">
+    <%= f.label :father_organisation_address %><br>
+    <%= f.text_field :father_organisation_address %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_occupation_or_designation %><br>
+    <%= f.text_field :mother_occupation_or_designation %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_annual_income %><br>
+    <%= f.text_field :mother_annual_income %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_organisation_name %><br>
+    <%= f.text_field :mother_organisation_name %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_organisation_address %><br>
+    <%= f.text_field :mother_organisation_address %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

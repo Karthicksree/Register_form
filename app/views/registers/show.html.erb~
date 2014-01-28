@@ -1,0 +1,151 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name of student:</strong>
+  <%= @register.name_of_student %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @register.date_of_birth %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @register.gender %>
+</p>
+
+<p>
+  <strong>Father or guardian name:</strong>
+  <%= @register.father_or_guardian_name %>
+</p>
+
+<p>
+  <strong>Mother name:</strong>
+  <%= @register.mother_name %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @register.nationality %>
+</p>
+
+<p>
+  <strong>Religion:</strong>
+  <%= @register.religion %>
+</p>
+
+<p>
+  <strong>Caste:</strong>
+  <%= @register.caste %>
+</p>
+
+<p>
+  <strong>Student category:</strong>
+  <%= @register.student_category %>
+</p>
+
+<p>
+  <strong>Sibling or existing parent:</strong>
+  <%= @register.sibling_or_existing_parent %>
+</p>
+
+<p>
+  <strong>Child with special needs:</strong>
+  <%= @register.child_with_special_needs %>
+</p>
+
+<p>
+  <strong>Locality:</strong>
+  <%= @register.locality %>
+</p>
+
+<p>
+  <strong>Residential address:</strong>
+  <%= @register.residential_address %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @register.pincode %>
+</p>
+
+<p>
+  <strong>Landmark:</strong>
+  <%= @register.landmark %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @register.mobile_number %>
+</p>
+
+<p>
+  <strong>Landline number:</strong>
+  <%= @register.landline_number %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @register.email_address %>
+</p>
+
+<p>
+  <strong>Father or guardian qualification:</strong>
+  <%= @register.father_or_guardian_qualification %>
+</p>
+
+<p>
+  <strong>Mother qualification:</strong>
+  <%= @register.mother_qualification %>
+</p>
+
+<p>
+  <strong>Father occupation or designation:</strong>
+  <%= @register.father_occupation_or_designation %>
+</p>
+
+<p>
+  <strong>Father annual income:</strong>
+  <%= @register.father_annual_income %>
+</p>
+
+<p>
+  <strong>Father organisation name:</strong>
+  <%= @register.father_organisation_name %>
+</p>
+
+<p>
+  <strong>Father organisation address:</strong>
+  <%= @register.father_organisation_address %>
+</p>
+
+<p>
+  <strong>Mother occupation or designation:</strong>
+  <%= @register.mother_occupation_or_designation %>
+</p>
+
+<p>
+  <strong>Mother annual income:</strong>
+  <%= @register.mother_annual_income %>
+</p>
+
+<p>
+  <strong>Mother organisation name:</strong>
+  <%= @register.mother_organisation_name %>
+</p>
+
+<p>
+  <strong>Mother organisation address:</strong>
+  <%= @register.mother_organisation_address %>
+</p>
+<p>
+<%if @register.image? %>
+<%= image_tag @register.image.url %>
+<br />
+<%= link_to @register.image.url, @register.image.url %>
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_register_path(@register) %> |
+<%= link_to 'Back', registers_path %>

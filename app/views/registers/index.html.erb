@@ -1,0 +1,83 @@
+<h1>Listing registers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name of student</th>
+      <th>Date of birth</th>
+      <th>Gender</th>
+      <th>Father or guardian name</th>
+      <th>Mother name</th>
+      <th>Nationality</th>
+      <th>Religion</th>
+      <th>Caste</th>
+      <th>Community category</th>
+      <th>Student category</th>
+      <th>Sibling or existing parent</th>
+      <th>Child with special needs</th>
+      <th>Locality</th>
+      <th>Residential address</th>
+      <th>Pincode</th>
+      <th>Landmark</th>
+      <th>Mobile number</th>
+      <th>Landline number</th>
+      <th>Email address</th>
+      <th>Father or guardian qualification</th>
+      <th>Mother qualification</th>
+      <th>Father occupation or designation</th>
+      <th>Father annual income</th>
+      <th>Father organisation name</th>
+      <th>Father organisation address</th>
+      <th>Mother occupation or designation</th>
+      <th>Mother annual income</th>
+      <th>Mother organisation name</th>
+      <th>Mother organisation address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registers.each do |register| %>
+      <tr>
+        <td><%= register.name_of_student %></td>
+        <td><%= register.date_of_birth %></td>
+        <td><%= register.gender %></td>
+        <td><%= register.father_or_guardian_name %></td>
+        <td><%= register.mother_name %></td>
+        <td><%= register.nationality %></td>
+        <td><%= register.religion %></td>
+        <td><%= register.caste %></td>
+        <td><%= register.community_category %></td>
+        <td><%= register.student_category %></td>
+        <td><%= register.sibling_or_existing_parent %></td>
+        <td><%= register.child_with_special_needs %></td>
+        <td><%= register.locality %></td>
+        <td><%= register.residential_address %></td>
+        <td><%= register.pincode %></td>
+        <td><%= register.landmark %></td>
+        <td><%= register.mobile_number %></td>
+        <td><%= register.landline_number %></td>
+        <td><%= register.email_address %></td>
+        <td><%= register.father_or_guardian_qualification %></td>
+        <td><%= register.mother_qualification %></td>
+        <td><%= register.father_occupation_or_designation %></td>
+        <td><%= register.father_annual_income %></td>
+        <td><%= register.father_organisation_name %></td>
+        <td><%= register.father_organisation_address %></td>
+        <td><%= register.mother_occupation_or_designation %></td>
+        <td><%= register.mother_annual_income %></td>
+        <td><%= register.mother_organisation_name %></td>
+        <td><%= register.mother_organisation_address %></td>
+        <td><%= link_to 'Show', register %></td>
+        <td><%= link_to 'Edit', edit_register_path(register) %></td>
+        <td><%= link_to 'Destroy', register, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Register', new_register_path %>

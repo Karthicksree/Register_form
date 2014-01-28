@@ -1,0 +1,4 @@
+class AddCommunityCategoryToregisters < ActiveRecord::Migration
+  def change
+  end
+end

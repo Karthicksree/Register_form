@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_of_student: MyString
+  date_of_birth: 2014-01-27
+  gender: MyString
+  father_or_guardian_name: MyString
+  mother_name: MyString
+  nationality: MyString
+  religion: MyString
+  caste: MyString
+  student_category: MyString
+  sibling_or_existing_parent: MyString
+  child_with_special_needs: MyString
+  locality: MyString
+  residential_address: MyString
+  pincode: MyString
+  landmark: MyString
+  mobile_number: MyString
+  landline_number: MyString
+  email_address: MyString
+  father_or_guardian_qualification: MyString
+  mother_qualification: MyString
+  father_occupation_or_designation: MyString
+  father_annual_income: MyString
+  father_organisation_name: MyString
+  father_organisation_address: MyString
+  mother_occupation_or_designation: MyString
+  mother_annual_income: MyString
+  mother_organisation_name: MyString
+  mother_organisation_address: MyString
+
+two:
+  name_of_student: MyString
+  date_of_birth: 2014-01-27
+  gender: MyString
+  father_or_guardian_name: MyString
+  mother_name: MyString
+  nationality: MyString
+  religion: MyString
+  caste: MyString
+  student_category: MyString
+  sibling_or_existing_parent: MyString
+  child_with_special_needs: MyString
+  locality: MyString
+  residential_address: MyString
+  pincode: MyString
+  landmark: MyString
+  mobile_number: MyString
+  landline_number: MyString
+  email_address: MyString
+  father_or_guardian_qualification: MyString
+  mother_qualification: MyString
+  father_occupation_or_designation: MyString
+  father_annual_income: MyString
+  father_organisation_name: MyString
+  father_organisation_address: MyString
+  mother_occupation_or_designation: MyString
+  mother_annual_income: MyString
+  mother_organisation_name: MyString
+  mother_organisation_address: MyString
