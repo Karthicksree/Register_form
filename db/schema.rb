@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140127172511) do
+ActiveRecord::Schema.define(version: 20140129144731) do
 
   create_table "datafiles", force: true do |t|
     t.datetime "created_at"
@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 20140127172511) do
     t.string   "child_with_special_needs"
     t.string   "locality"
     t.string   "residential_address"
-    t.string   "pincode"
+    t.integer  "pincode",                          limit: 255
     t.string   "landmark"
-    t.string   "mobile_number"
-    t.string   "landline_number"
+    t.integer  "mobile_number",                    limit: 255
+    t.integer  "landline_number",                  limit: 255
     t.string   "email_address"
     t.string   "father_or_guardian_qualification"
     t.string   "mother_qualification"

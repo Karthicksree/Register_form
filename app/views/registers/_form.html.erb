@@ -19,16 +19,17 @@
   </div>
   <div class="field">
     <%= f.label :date_of_birth %><br>
-    <%= f.text_field :date_of_birth, 'data-behaviour' => 'datepicker' %>
+    
+    <%= f.text_field :date_of_birth, :id => "datepicker" %>
+
   </div>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
+    <%= f.file_field :birth_certificate %>
   </div>
 <h5>Upload birth certificate</h5>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.select(:gender, [['Male', 1], ['Female', 2]]) %>
   </div>
   <div class="field">
     <%= f.label :father_or_guardian_name %><br>
@@ -52,16 +53,20 @@
   </div>
  <div class="field">
     <%= f.label :community_category %><br>
-    <%= f.text_field :community_category %>
+    <%= f.select(:community_category, [['OC', 1], ['BC', 2], ['MBC', 3], ['SC', 4], ['ST', 5], ['DNC', 6]]) %>
   </div>
-  
+  <div class="field">
+    <%= f.file_field :community_certificate %>
+  </div>
  <h5>Upload community certificate</h5>
   <div class="field">
     <%= f.label :student_category %><br>
-    <%= f.text_field :student_category %>
+    <%= f.select(:student_category, [['General', 1], ['SBI Grand Parent', 2], ['SBI Officers', 3], ['Pre-school',4], ['Alumni',5], ['Staff Child',6], ['Existing Parent',7]]) %>
   </div>
-  
- <h5>Upload sample certificate</h5>
+  <div class="field">
+    <%= f.file_field :category_certificate %>
+  </div>
+ <h5>Upload category certificate</h5>
   <div class="field">
     <%= f.label :sibling_or_existing_parent %><br>
     <%= f.text_field :sibling_or_existing_parent %>
@@ -70,17 +75,21 @@
     <%= f.label :child_with_special_needs %><br>
     <%= f.text_field :child_with_special_needs %>
   </div>
-  
+  <div class="field">
+    <%= f.file_field :medical_certificate %>
+  </div>
  <h5>Upload enclose medical certificate</h5>
   <div class="field">
     <%= f.label :locality %><br>
-    <%= f.text_field :locality %>
+    <%= f.select(:locality, [['0 to 3 kilometers', 1], ['4 to 5 kilometers', 2], ['6 to 8 kilometers', 3], ['9 to 10 kilometers', 4], [' Above 10 kilometers', 5]]) %>
   </div>
   <div class="field">
     <%= f.label :residential_address %><br>
     <%= f.text_field :residential_address %>
   </div>
-  
+  <div class="field">
+    <%= f.file_field :address_proof %>
+  </div>
  <h5>Upload address proof</h5>
   <div class="field">
     <%= f.label :pincode %><br>
@@ -106,13 +115,17 @@
     <%= f.label :father_or_guardian_qualification %><br>
     <%= f.text_field :father_or_guardian_qualification %>
   </div>
-  
+  <div class="field">
+    <%= f.file_field :educational_certificate %>
+  </div>
  <h5>Upload educational certificate</h5>
   <div class="field">
     <%= f.label :mother_qualification %><br>
     <%= f.text_field :mother_qualification %>
   </div>
-  
+  <div class="field">
+    <%= f.file_field :qualification_certificate %>
+  </div>
  <h5>Upload educational certificate</h5>
   <div class="field">
     <%= f.label :father_occupation_or_designation %><br>
@@ -120,8 +133,12 @@
   </div>
   <div class="field">
     <%= f.label :father_annual_income %><br>
-    <%= f.text_field :father_annual_income %>
+    <%= f.select(:father_annual_income, [['Above 3 Lakhs', 1], ['Above 6 Lakhs', 2], ['Above 10 Lakhs', 3]]) %>
   </div>
+  <div class="field">
+    <%= f.file_field :income_certificate %>
+  </div>
+  <h5>Upload income certificate</h5>
   <div class="field">
     <%= f.label :father_organisation_name %><br>
     <%= f.text_field :father_organisation_name %>
@@ -136,7 +153,7 @@
   </div>
   <div class="field">
     <%= f.label :mother_annual_income %><br>
-    <%= f.text_field :mother_annual_income %>
+    <%= f.select(:mother_annual_income, [['Above 3 Lakhs', 1], ['Above 6 Lakhs', 2], ['Above 10 Lakhs', 3], ['None', 4]]) %>
   </div>
   <div class="field">
     <%= f.label :mother_organisation_name %><br>

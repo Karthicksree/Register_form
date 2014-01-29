@@ -9,7 +9,8 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= require jquery.ui.all
+//= require jquery.ui.datepicker
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks

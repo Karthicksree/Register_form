@@ -1,0 +1,6 @@
+<% form_for(:image,
+url: {action: 'save'},
+html: {multipart: true}) do |form| %>
+Upload your image: <%= form.image_field("uploaded_file") %><br/>
+<%= submit_tag("Upload file") %>
+<% end %>

@@ -9,7 +9,30 @@ class RegistersController < ApplicationController
 
   # GET /registers/1
   # GET /registers/1.json
+
+  def get
+  @registers = Image.new
+  end
+
+
+  def save
+   @registers = Image.new(params[:image])
+   if @registers.save
+   redirect_to(action: 'show', id: @image.id)
+   else
+   render(action: :get)
+   end
+  end
+
+  def image
+     @image = Image.find(params[:id])
+     send_data(@image.type,
+     imagename: @image.name,
+     disposition: "inline")
+  end
+
   def show
+   @register = Register.find(params[:id])
   end
 
   # GET /registers/new
@@ -20,7 +43,7 @@ class RegistersController < ApplicationController
   # GET /registers/1/edit
   def edit
   end
-
+   
   # POST /registers
   # POST /registers.json
   def create
@@ -35,7 +58,8 @@ class RegistersController < ApplicationController
         format.json { render json: @register.errors, status: :unprocessable_entity }
       end
     end
-  end
+
+    end
 
   # PATCH/PUT /registers/1
   # PATCH/PUT /registers/1.json

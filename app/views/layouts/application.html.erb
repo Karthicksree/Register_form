@@ -16,5 +16,12 @@
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+    <script src="/javascripts/jquery.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.ui.datepicker.js"></script>
+    <script>
+     jQuery(function() {
+      jQuery("#datepicker").datepicker();
+      });
+</script>
   </body>
 </html>

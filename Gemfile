@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -31,6 +31,10 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+gem 'jquery-ui-rails'
+gem 'twitter-bootstrap-rails'
+gem 'valid_email'
 gem 'simple_form'
 gem 'date_validator'
 gem 'bootstrap-datepicker-rails'
