@@ -1,7 +1,0 @@
-class Register < ActiveRecord::Base
-  has_many :AddFileToRegisters, :dependent => :destroy
-  has_attached_file :image
-  attr_accessor :community_category
- validates :expiration_date,
-  :date => { :after => 30.11.2010, :before => 30.11.2010 + 1.year }
-end

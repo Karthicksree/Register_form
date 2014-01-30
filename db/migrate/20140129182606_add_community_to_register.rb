@@ -1,0 +1,73 @@
+class AddCommunityToRegister < ActiveRecord::Migration
+  def self.up
+  add_column :registers, :community_category, :string
+  add_column :registers, :birth_certificate_file_name, :string
+  add_column :registers, :birth_certificate_content_type, :string
+  add_column :registers, :birth_certificate_file_size, :integer
+  add_column :registers, :birth_certificate_updated_at, :datetime
+  add_column :registers, :community_category_file_name, :string
+  add_column :registers, :community_category_content_type, :string
+  add_column :registers, :community_category_file_size, :integer
+  add_column :registers, :community_category_updated_at, :datetime
+  add_column :registers, :category_certificate_file_name, :string
+  add_column :registers, :category_certificate_content_type, :string
+  add_column :registers, :category_certificate_file_size, :integer
+  add_column :registers, :category_certificate_updated_at, :datetime
+  add_column :registers, :medical_certificate_file_name, :string
+  add_column :registers, :medical_certificate_content_type, :string
+  add_column :registers, :medical_certificate_file_size, :integer
+  add_column :registers, :medical_certificate_updated_at, :datetime
+  add_column :registers, :address_proof_file_name, :string
+  add_column :registers, :address_proof_content_type, :string
+  add_column :registers, :address_proof_file_size, :integer
+  add_column :registers, :address_proof_updated_at, :datetime
+  add_column :registers, :educational_certificate_file_name, :string
+  add_column :registers, :educational_certificate_content_type, :string
+  add_column :registers, :educational_certificate_file_size, :integer
+  add_column :registers, :educational_certificate_updated_at, :datetime
+  add_column :registers, :qualification_certificate_file_name, :string
+  add_column :registers, :qualification_certificate_content_type, :string
+  add_column :registers, :qualification_certificate_file_size, :integer
+  add_column :registers, :qualification_certificate_updated_at, :datetime
+  add_column :registers, :income_certificate_file_name, :string
+  add_column :registers, :income_certificate_content_type, :string
+  add_column :registers, :income_certificate_file_size, :integer
+  add_column :registers, :income_certificate_updated_at, :datetime
+  end
+  def self.down
+  remove_column :registers, :birth_certificate_file_name, :string
+  remove_column :registers, :birth_certificate_content_type, :string
+  remove_column :registers, :birth_certificate_file_size, :integer
+  remove_column :registers, :birth_certificate_updated_at, :datetime
+  remove_column :registers, :community_category_file_name, :string
+  remove_column :registers, :community_category_content_type, :string
+  remove_column :registers, :community_category_file_size, :integer
+  remove_column :registers, :community_category_updated_at, :datetime
+  remove_column :registers, :category_certificate_file_name, :string
+  remove_column :registers, :category_certificate_content_type, :string
+  remove_column :registers, :category_certificate_file_size, :integer
+  remove_column :registers, :category_certificate_updated_at, :datetime
+  remove_column :registers, :medical_certificate_file_name, :string
+  remove_column :registers, :medical_certificate_content_type, :string
+  remove_column :registers, :medical_certificate_file_size, :integer
+  remove_column :registers, :medical_certificate_updated_at, :datetime
+  remove_column :registers, :address_proof_file_name, :string
+  remove_column :registers, :address_proof_content_type, :string
+  remove_column :registers, :address_proof_file_size, :integer
+  remove_column :registers, :address_proof_updated_at, :datetime
+  remove_column :registers, :educational_certificate_file_name, :string
+  remove_column :registers, :educational_certificate_content_type, :string
+  remove_column :registers, :educational_certificate_file_size, :integer
+  remove_column :registers, :educational_certificate_updated_at, :datetime
+  remove_column :registers, :qualification_certificate_file_name, :string
+  remove_column :registers, :qualification_certificate_content_type, :string
+  remove_column :registers, :qualification_certificate_file_size, :integer
+  remove_column :registers, :qualification_certificate_updated_at, :datetime
+  remove_column :registers, :income_certificate_file_name, :string
+  remove_column :registers, :income_certificate_content_type, :string
+  remove_column :registers, :income_certificate_file_size, :integer
+  remove_column :registers, :income_certificate_updated_at, :datetime
+  remove_column :registers, :community_category, :string
+ end
+
+end

@@ -1,6 +1,7 @@
-<h1>SBOA SCHOOL JUNIOR COLLEGE,CHENNAI-600101.</h1>
+<h1>SBOA SCHOOL JUNIOR COLLEGE,CHENNAI-600101</h1>
 <h2>Registration form for LKG Admission 2013-2014</h2>
 <%= form_for(@register) do |f| %>
+<% form_for @register,:html => { :multipart => true } do |f| %> 
   <% if @register.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@register.errors.count, "error") %> prohibited this register from being saved:</h2>
@@ -19,17 +20,16 @@
   </div>
   <div class="field">
     <%= f.label :date_of_birth %><br>
-    
-    <%= f.text_field :date_of_birth, :id => "datepicker" %>
-
+    <%= f.text_field :date_of_birth, id:"datepicker" %>
   </div>
   <div class="field">
     <%= f.file_field :birth_certificate %>
   </div>
 <h5>Upload birth certificate</h5>
+
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.select(:gender, [['Male', 1], ['Female', 2]]) %>
+    <%= f.select(:gender, options_for_select(["Male", "Female"])) %>
   </div>
   <div class="field">
     <%= f.label :father_or_guardian_name %><br>
@@ -53,15 +53,17 @@
   </div>
  <div class="field">
     <%= f.label :community_category %><br>
-    <%= f.select(:community_category, [['OC', 1], ['BC', 2], ['MBC', 3], ['SC', 4], ['ST', 5], ['DNC', 6]]) %>
+    <%= f.select(:community_category, options_for_select(["OC", "BC", "MBC", "SC", "ST", "DNC"])) %>
   </div>
   <div class="field">
+    
     <%= f.file_field :community_certificate %>
   </div>
  <h5>Upload community certificate</h5>
   <div class="field">
     <%= f.label :student_category %><br>
-    <%= f.select(:student_category, [['General', 1], ['SBI Grand Parent', 2], ['SBI Officers', 3], ['Pre-school',4], ['Alumni',5], ['Staff Child',6], ['Existing Parent',7]]) %>
+    <%= f.select(:student_category, options_for_select(["General", "SBI Grand Parent", "SBI Officers", "Pre-school",
+      "Alumni", "Staff Child", "Existing Parent"])) %>
   </div>
   <div class="field">
     <%= f.file_field :category_certificate %>
@@ -81,7 +83,7 @@
  <h5>Upload enclose medical certificate</h5>
   <div class="field">
     <%= f.label :locality %><br>
-    <%= f.select(:locality, [['0 to 3 kilometers', 1], ['4 to 5 kilometers', 2], ['6 to 8 kilometers', 3], ['9 to 10 kilometers', 4], [' Above 10 kilometers', 5]]) %>
+    <%= f.select(:locality, options_for_select(["0 to 3 kilometers", "4 to 5 kilometers", "6 to 8 kilometers", "9 to 10 kilometers", "Above 10 kilometers"])) %>
   </div>
   <div class="field">
     <%= f.label :residential_address %><br>
@@ -133,7 +135,7 @@
   </div>
   <div class="field">
     <%= f.label :father_annual_income %><br>
-    <%= f.select(:father_annual_income, [['Above 3 Lakhs', 1], ['Above 6 Lakhs', 2], ['Above 10 Lakhs', 3]]) %>
+    <%= f.select(:father_annual_income, options_for_select(["Above 3 Lakhs", "Above 6 Lakhs", "Above 10 Lakhs"])) %>
   </div>
   <div class="field">
     <%= f.file_field :income_certificate %>
@@ -153,7 +155,7 @@
   </div>
   <div class="field">
     <%= f.label :mother_annual_income %><br>
-    <%= f.select(:mother_annual_income, [['Above 3 Lakhs', 1], ['Above 6 Lakhs', 2], ['Above 10 Lakhs', 3], ['None', 4]]) %>
+    <%= f.select(:mother_annual_income, options_for_select(["Above 3 Lakhs", "Above 6 Lakhs", "Above 10 Lakhs", "None"])) %>
   </div>
   <div class="field">
     <%= f.label :mother_organisation_name %><br>
@@ -167,4 +169,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
 <% end %>

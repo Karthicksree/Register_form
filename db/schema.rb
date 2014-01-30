@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140129144731) do
+ActiveRecord::Schema.define(version: 20140130113102) do
 
   create_table "datafiles", force: true do |t|
     t.datetime "created_at"
@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 20140129144731) do
     t.string   "child_with_special_needs"
     t.string   "locality"
     t.string   "residential_address"
-    t.integer  "pincode",                          limit: 255
+    t.integer  "pincode",                                limit: 255
     t.string   "landmark"
-    t.integer  "mobile_number",                    limit: 255
-    t.integer  "landline_number",                  limit: 255
+    t.integer  "mobile_number",                          limit: 255
+    t.integer  "landline_number",                        limit: 255
     t.string   "email_address"
     t.string   "father_or_guardian_qualification"
     t.string   "mother_qualification"
@@ -53,6 +53,44 @@ ActiveRecord::Schema.define(version: 20140129144731) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "community_category"
+    t.string   "birth_certificate_file_name"
+    t.string   "birth_certificate_content_type"
+    t.integer  "birth_certificate_file_size"
+    t.datetime "birth_certificate_updated_at"
+    t.string   "community_category_file_name"
+    t.string   "community_category_content_type"
+    t.integer  "community_category_file_size"
+    t.datetime "community_category_updated_at"
+    t.string   "category_certificate_file_name"
+    t.string   "category_certificate_content_type"
+    t.integer  "category_certificate_file_size"
+    t.datetime "category_certificate_updated_at"
+    t.string   "medical_certificate_file_name"
+    t.string   "medical_certificate_content_type"
+    t.integer  "medical_certificate_file_size"
+    t.datetime "medical_certificate_updated_at"
+    t.string   "address_proof_file_name"
+    t.string   "address_proof_content_type"
+    t.integer  "address_proof_file_size"
+    t.datetime "address_proof_updated_at"
+    t.string   "educational_certificate_file_name"
+    t.string   "educational_certificate_content_type"
+    t.integer  "educational_certificate_file_size"
+    t.datetime "educational_certificate_updated_at"
+    t.string   "qualification_certificate_file_name"
+    t.string   "qualification_certificate_content_type"
+    t.integer  "qualification_certificate_file_size"
+    t.datetime "qualification_certificate_updated_at"
+    t.string   "income_certificate_file_name"
+    t.string   "income_certificate_content_type"
+    t.integer  "income_certificate_file_size"
+    t.datetime "income_certificate_updated_at"
+    t.string   "upload_file_name"
+    t.string   "upload_content_type"
+    t.integer  "upload_file_size"
+    t.datetime "upload_updated_at"
+    t.string   "birth_certificate"
   end
 
 end

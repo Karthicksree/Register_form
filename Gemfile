@@ -31,6 +31,7 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+gem 'quiet_assets', :group => :development
 
 gem 'jquery-ui-rails'
 gem 'twitter-bootstrap-rails'
@@ -38,11 +39,12 @@ gem 'valid_email'
 gem 'simple_form'
 gem 'date_validator'
 gem 'bootstrap-datepicker-rails'
-gem "paperclip"
+gem 'carrierwave'
 gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'
 end
+
 
 group :production do
 gem 'thin'
@@ -59,3 +61,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem "rmagick"

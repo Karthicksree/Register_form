@@ -10,31 +10,7 @@ class RegistersController < ApplicationController
   # GET /registers/1
   # GET /registers/1.json
 
-  def get
-  @registers = Image.new
-  end
-
-
-  def save
-   @registers = Image.new(params[:image])
-   if @registers.save
-   redirect_to(action: 'show', id: @image.id)
-   else
-   render(action: :get)
-   end
-  end
-
-  def image
-     @image = Image.find(params[:id])
-     send_data(@image.type,
-     imagename: @image.name,
-     disposition: "inline")
-  end
-
-  def show
-   @register = Register.find(params[:id])
-  end
-
+  
   # GET /registers/new
   def new
     @register = Register.new
@@ -48,7 +24,13 @@ class RegistersController < ApplicationController
   # POST /registers.json
   def create
     @register = Register.new(register_params)
-
+    
+    # @register.birth_certificate = File.open('somewhere')
+    # @register.save!
+    # @register.birth_certificate.url # => '/url/to/file.png'
+    # @register.birth_certificate.current_path # => 'path/to/file.png'
+    # @register.birth_certificate.identifier # => 'file.png'
+    
     respond_to do |format|
       if @register.save
         format.html { redirect_to @register, notice: 'Register was successfully created.' }
@@ -85,6 +67,9 @@ class RegistersController < ApplicationController
     end
   end
 
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_register
@@ -93,6 +78,6 @@ class RegistersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def register_params
-      params.require(:register).permit(:name_of_student, :date_of_birth, :gender, :father_or_guardian_name, :mother_name, :nationality, :religion, :caste, :community_category, :student_category, :sibling_or_existing_parent, :child_with_special_needs, :locality, :residential_address, :pincode, :landmark, :mobile_number, :landline_number, :email_address, :father_or_guardian_qualification, :mother_qualification, :father_occupation_or_designation, :father_annual_income, :father_organisation_name, :father_organisation_address, :mother_occupation_or_designation, :mother_annual_income, :mother_organisation_name, :mother_organisation_address)
+      params.require(:register).permit(:name_of_student, :date_of_birth, :birth_certificate, :gender, :father_or_guardian_name, :mother_name, :nationality, :religion, :caste, :community_category, :student_category, :sibling_or_existing_parent, :child_with_special_needs, :locality, :residential_address, :pincode, :landmark, :mobile_number, :landline_number, :email_address, :father_or_guardian_qualification, :mother_qualification, :father_occupation_or_designation, :father_annual_income, :father_organisation_name, :father_organisation_address, :mother_occupation_or_designation, :mother_annual_income, :mother_organisation_name, :mother_organisation_address)
     end
 end
